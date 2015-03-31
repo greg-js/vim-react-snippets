@@ -90,3 +90,12 @@ snippet state
 	this.state.${1}
 snippet trp
 	transferPropsTo(${1});
+snippet mix
+	var ${1}Mixin = {
+		${2}
+	};
+snippet Ren
+	React.render(
+		<${1:Component} />,
+		document.getElementById('${2:app}')
+	);

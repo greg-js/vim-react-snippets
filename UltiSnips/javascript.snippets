@@ -92,13 +92,11 @@ ${1:/**
 var React = require('react');
 }
 var ${2:ClassName} = React.createClass({
-
-render: function() {
-	return (
-		${VISUAL}$4
-	);
-}
-
+	render: function() {
+		return (
+			${VISUAL}$4
+		);
+	}
 });
 $0
 ${3:module.exports = $2;}
@@ -134,4 +132,17 @@ endsnippet
 
 snippet trp
 this.transferPropsTo(${VISUAL}$0);
+endsnippet
+
+snippet mix "create mixin" b
+var ${1}Mixin = {
+	${2}
+};
+endsnippet
+
+snippet Ren "render class/component to document" b
+React.render(
+	<${1:Component} />,
+	document.getElementById('${2:app}')
+);
 endsnippet
